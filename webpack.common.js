@@ -11,7 +11,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Webpack 5 Config',
+      title: 'Mailer Designer',
       filename: 'index.html',
       template: 'public/template.html'
     })

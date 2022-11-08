@@ -2,10 +2,29 @@
 <html>
   <head>
     <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <h1>Hello World</h1>
-    <div id="icon"></div>
+    <main>
+
+     <form is="mailer-designer">
+        <div class="md-floating">
+          <span>To</span>
+          <input type="email">
+        </div>
+        <div class="md-floating">
+          <span>Cc</span>
+          <input type="email">
+        </div>
+        <div class="md-floating">
+          <input type="text" placeholder="Subject">
+        </div>
+        <div class="md-floating">
+          <textarea placeholder="Comments"></textarea>
+        </div>
+      </form>
+
+    </main>
   </body>
 </html>
