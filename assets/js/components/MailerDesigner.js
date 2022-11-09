@@ -32,7 +32,7 @@ export default class MailerDesigner extends HTMLFormElement {
             if(elt.value && this.validateEmail(elt)) {
                 elt.insertAdjacentHTML('beforebegin', 
                 `
-                <span class="md-badge" draggable="true">${elt.value}</span>
+                <span class="md-badge" draggable="true">${elt.value.toLowerCase()}</span>
                 `
                 )
                 elt.value = ''
@@ -44,7 +44,7 @@ export default class MailerDesigner extends HTMLFormElement {
         const emails = target.parentElement.querySelectorAll('.md-badge')
 
         for(const email of emails) {
-            if(email.innerText === target.value) return false
+            if(email.innerText === target.value.toLowerCase()) return false
         }
 
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(target.value)) {
