@@ -12,6 +12,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
   ],
    output: {
     filename: '[name].js',
+    assetModuleFilename: 'assets/[name][ext]'
   },
   devServer:{
     static: {

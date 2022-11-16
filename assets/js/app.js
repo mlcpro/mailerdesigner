@@ -1,6 +1,6 @@
 import MailerDesigner from "./components/MailerDesigner";
 
-customElements.define('mailer-designer', MailerDesigner, { extends: 'form' });
+new MailerDesigner('mailer-designer')
 
 let dragged;
 document.addEventListener("dragstart", function( event ) {

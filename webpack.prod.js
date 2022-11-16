@@ -14,5 +14,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
    output: {
     // mise en cache
     filename: '[name].[contenthash].js',
+    assetModuleFilename: 'assets/[hash][ext]'
   },
  });

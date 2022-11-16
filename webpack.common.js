@@ -36,7 +36,7 @@ module.exports = {
             }
         },
         {
-          test: /\.scss$/i,
+          test: /\.(sa|sc|c)ss$/i,
           use: [
             // Extrait le css dans des fichiers séparé
             MiniCssExtractPlugin.loader,
@@ -66,6 +66,9 @@ module.exports = {
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/i,
           type: 'asset/resource',
+          generator: {
+            filename: 'fonts/[name].[hash][ext]'
+          }
         },
     ]
   }

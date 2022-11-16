@@ -1,7 +1,8 @@
-export default class MailerDesigner extends HTMLFormElement {
-    connectedCallback () {
-        this.addEventListener('keydown', this.onKeyDown)
-        this.addEventListener('focusout', this.onFocus)
+export default class MailerDesigner  {
+    constructor (id) {
+        this.form = document.getElementById(id)
+        this.form.addEventListener('keydown', this.onKeyDown.bind(this))
+        this.form.addEventListener('focusout', this.onFocus.bind(this))
     }
 
     onKeyDown(e) {
